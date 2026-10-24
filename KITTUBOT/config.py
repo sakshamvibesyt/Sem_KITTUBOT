@@ -39,7 +39,7 @@ class Config:
     # Permissions & Privileges
     OWNER_ID: int = _get_int("OWNER_ID", 0)
     LOGGER_ID: int = _get_int("LOGGER_ID", 0)
-    OWNER_LINK: str = os.getenv("OWNER_LINK", "https://t.me/eceqt").strip()
+    OWNER_LINK: str = os.getenv("OWNER_LINK", "https://t.me/Sakshamvenus").strip()
 
     SUDO_IDS: list[int] = [
         int(x)
