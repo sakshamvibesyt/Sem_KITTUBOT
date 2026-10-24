@@ -1,3 +1,4 @@
+
 name: Gunnu Keep Alive
 
 on:
@@ -12,17 +13,10 @@ jobs:
 
     steps:
       - name: Ping Gunnu Health Endpoint
-        env:
-          TARGET_URL: ${{ secrets.TARGET_URL }}
         run: |
-          if [ -z "$TARGET_URL" ]; then
-            echo "TARGET_URL secret is missing"
-            exit 1
-          fi
-
           curl --fail --silent --show-error \
             --max-time 30 \
-            "$TARGET_URL"
+            https://sem-kittubot.onrender.com/health
           echo ""
           echo "Gunnu health check completed."
           
